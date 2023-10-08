@@ -27,6 +27,8 @@ urlpatterns = [
     path('', views.recepie),
     path('register/', views.register, name="register"),
     path('login/', views.loginpage, name = "login"),
+    path('delete/<id>/', views.delete_recipe, name="delete_recipe"),
+    path('update_recipe/<id>/',views.update_recipe, name="update_recipe")
     
     
 ]
@@ -34,4 +36,4 @@ if settings.DEBUG:
      urlpatterns += static(settings.MEDIA_URL,
                            document_root=settings.MEDIA_ROOT)
      
-urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += staticfiles_urlpatterns()
